@@ -1,0 +1,50 @@
+\contentsline {chapter}{Acknowledgement}{13}{chapter*.4}
+\contentsline {chapter}{Working With Ubuntu}{15}{chapter*.5}
+\contentsline {section}{Introduction}{15}{section*.6}
+\contentsline {subsection}{Operating Systems}{15}{subsection*.7}
+\contentsline {subsection}{Unix \& Linux}{16}{subsection*.8}
+\contentsline {subsection}{Ubuntu}{16}{subsection*.9}
+\contentsline {subsection}{Open Source}{17}{subsection*.10}
+\contentsline {section}{Terminal}{17}{section*.11}
+\contentsline {subsection}{Getting into the Terminal}{17}{subsection*.12}
+\contentsline {subsection}{Common Commands}{20}{subsection*.15}
+\contentsline {subsection}{Understanding filestructure of Ubuntu}{20}{subsection*.17}
+\contentsline {subsection}{Copy, Paste, Delete}{20}{subsection*.18}
+\contentsline {subsection}{common commands}{21}{subsection*.20}
+\contentsline {subsection}{Further Resources}{21}{subsection*.22}
+\contentsline {chapter}{Working with \textit {LIGGGHTS}}{23}{chapter*.23}
+\contentsline {section}{Introduction}{23}{section*.24}
+\contentsline {section}{Example Scripts}{23}{section*.25}
+\contentsline {subsection}{Running \textit {LIGGGHTS}Script}{25}{subsection*.27}
+\contentsline {section}{Converting the files}{25}{section*.28}
+\contentsline {section}{Using Paraview}{26}{section*.30}
+\contentsline {section}{Opening the input file}{27}{section*.34}
+\contentsline {section}{Different Files and format }{28}{section*.37}
+\contentsline {section}{Anatomy of input file}{28}{section*.38}
+\contentsline {subsection}{Initialisation}{30}{subsection*.39}
+\contentsline {subsection}{Properties}{31}{subsection*.40}
+\contentsline {subsection}{Detailed Settings}{32}{subsection*.41}
+\contentsline {subsection}{Execution Commands}{33}{subsection*.42}
+\contentsline {subsection}{Summary}{33}{subsection*.43}
+\contentsline {subsection}{Exercises}{33}{subsection*.44}
+\contentsline {chapter}{Making your own Simulation}{35}{chapter*.45}
+\contentsline {section}{Pre-requisites}{35}{section*.46}
+\contentsline {section}{Steps Involved}{36}{section*.48}
+\contentsline {section}{The Tale of FeedFrame}{36}{section*.49}
+\contentsline {subsection}{Defining our objective}{37}{subsection*.50}
+\contentsline {subsection}{Setting up the meshing and domain box}{37}{subsection*.51}
+\contentsline {subsection}{Collecting particle properties information}{38}{subsection*.56}
+\contentsline {subsection}{Writing the Initialisation}{39}{subsection*.58}
+\contentsline {subsection}{Writing the Properties}{40}{subsection*.59}
+\contentsline {section}{Errors, Errors Everywhere}{44}{section*.60}
+\contentsline {subsection}{Errors}{44}{subsection*.61}
+\contentsline {subsection}{Debugging basics}{45}{subsection*.62}
+\contentsline {subsection}{How to get help}{46}{subsection*.63}
+\contentsline {section}{Summary}{46}{section*.64}
+\contentsline {chapter}{Further Resources \& Ending Note}{47}{chapter*.65}
+\contentsline {section}{More functionality}{47}{section*.66}
+\contentsline {section}{Further Studying}{47}{section*.67}
+\contentsline {section}{Rationale behind working with \LaTeX }{48}{section*.68}
+\contentsline {chapter}{Bibliography}{49}{chapter*.69}
+\contentsline {chapter}{Index}{51}{chapter*.70}
+\contentsfinish 
