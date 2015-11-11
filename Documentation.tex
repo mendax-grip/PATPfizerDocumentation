@@ -57,7 +57,7 @@
 }
 
 \newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage} % Command to insert a blank page
-\newcommand{\Li}{\textit{LIGGGHTS}}
+\newcommand{\Li}{\textit{LIGGGHTS}\xspace}
 \newcommand{\La}{\textit{LAMMPS}}
 
 \newcommand{\TL}{Tufte-\LaTeX\xspace}
@@ -67,10 +67,17 @@
 %----------------------------------------------------------------------------------------
 %	BOOK META-INFORMATION
 %----------------------------------------------------------------------------------------
+\title[Discrete Element Method using LIGGGHTS]{%
+  \setlength{\parindent}{6pt}%
+  Discrete Element \par Method \par using LIGGGHTS \par \vspace{1cm} }
+ 
+\author{Siddharth Kanungo}
+\date{November 2015}
 
-\title{Discrete Element Method} % Title of the book
 
-\author{Siddharth Kanungo} % Author
+% \title{Discrete Element Method} % Title of the book
+
+% \author{Siddharth Kanungo} % Author
 
 \publisher{Ryan Gosselin, Nicolas Abatzoglou} % Publisher
 
@@ -129,8 +136,8 @@
 %----------------------------------------------------------------------------------------
 %	DEDICATION PAGE
 %----------------------------------------------------------------------------------------
-
 \cleardoublepage
+
 ~\vfill
 \begin{doublespace}
 \noindent\fontsize{18}{22}\selectfont\itshape
@@ -144,7 +151,7 @@ To my rational brain, for always being there for me, despite all the shaky evide
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
 
-\cleardoublepage
+
 \chapter{Acknowledgement} % The asterisk leaves out this chapter from the table of contents
 \label{ch:0}
  \index{acknowledgement}
@@ -157,7 +164,7 @@ To my rational brain, for always being there for me, despite all the shaky evide
 
     \newthought{I would also} like to also like to thank all the Lab Members of the Research Group, who helped me generously during my internship and graciously welcomed me into their part of the life.
 
-   \newthought{A special thanks} to Pedro Dura\'o, Philippe Kikongi, Himmat Dalvi, Francis Lavois, Ounaima  and 
+   \newthought{A special thanks} to Pedro Dura\'o, Philippe Kikongi, Himmat Dalvi, Francis Lavois, Ounaima  and Cl\'emence Fauteux-Lefebvre for  
 
    \newthought{ I would also like} to thank all the people I met during the internship, who helped me settle in and feel welcome at the same time. At last I would like to thanks MITACS for funding this incredible journey.
     
@@ -348,7 +355,7 @@ Therefore the above commands can be prefixed with \' sudo \'  to use the adminis
 \caption{xkcd shows what-if linux was real world}
 \label{fig:sandwich}
 \end{marginfigure}
-
+\index{Sudo Command}
 \subsection{Further Resources}
 \newthought{As you can notice} this is very rudimentary introduction to Ubuntu's command line. If you did not have enough time to go through the commands or you did not have access to linux machine, it is fine. As we will proceed further to use \Li, we will revise the commands and what it does.\sidenote{There are many online resources available to acquaint oneself with \href{http://lifehacker.com/how-can-i-quickly-learn-terminal-commands-1494082178}{ basic ubuntu commandline}. This is also a good discussion on how to learn the \href{http://ubuntuforums.org/showthread.php?t=275446}{commands}}
 
@@ -360,7 +367,7 @@ Also there is available a very comprehensive \href{http://cli.learncodethehardwa
 %	CHAPTER 2
 %----------------------------------------------------------------------------------------
 
-\chapter{Working with \Li}
+\chapter{Working with LIGGGHTS}
 \label{ch:2}
 
 \section[Introduction]{Introduction}
@@ -559,7 +566,10 @@ Before delving into the file structure, there are few file formats that needs to
    
   
 
-
+ \index{Initialisation}
+ \index{Properties}
+ \index{Detailed Settings}
+ \index{Execution}
  \newthought{The Input script} can be divided into four parts.
  \begin{itemize}
  \item \textbf{Initialisation} Setting the parameters that are needed to defined before the particles can be created. 
@@ -593,7 +603,7 @@ neigh_modify	delay 0
 
 \end{minted}
 \marginnote{\textsc{Commands that is best left as it is unless you know what you are doing}: \textbf{atom\_style, newton, atom\_modify}}
-
+\index{in.meshGran}
 \subsection{Properties}
 
 \begin{minted}{cpp}
@@ -777,7 +787,7 @@ There are few pre-requisite or preliminary data that needs to be collected befor
 \textit{We will walkthrough all of that using the following two settings. Next Stop. \textbf{The FeedFRAME Junction} }
 
 \section{The Tale of FeedFrame}
-
+\index{Feedframe}
 Feedframe is a part of tab-letting process in the drug-manufacturing process of pharmaceutical industries. Our goal here will be emulate the behaviour of feedframe with a binary mixtures ( in our case beads ), and make note of the segregation tendencies that results.
 
    \begin{marginfigure}
@@ -829,7 +839,7 @@ The important thing to remember is the following:
 \end{itemize}
 
 The geometry should be at origin because, \Li is completely based on commandline. As there are no GUI available, it is often difficult to get an idea where our imported geometry is. Keeping the geometry to origin makes sure that our geometry land right at the origin.
-
+\index{Geometry}
 The following are the dimensions obtained:
 \begin{table}
   \centering
@@ -928,7 +938,8 @@ The following needs to written during the initialisation. These commands are not
 \item \textit{Create\_Box} We will use 3 atoms and the domain is the cylinder we just specified
 \item \textit{Neighbor} The neighbour list will be created at a distance which is approximately equal to the diameter of the atom.
 \end{itemize}
-
+\index{Gravity}
+\index{Pair Style}
 \subsection{Writing the Properties}
 The following are the properties that will needed to be written 
 \begin{itemize}
@@ -1039,6 +1050,8 @@ fix		2 all gravity 9.81 vector 0.0 0.0 -1.0
 In general, \Li provide two pair styling.
 \begin{itemize}
 \item Hooke
+  \index{Hertz}
+  \index{Hooke}
 \item Hertz
 \end{itemize}
 Hertz performs better for short range forces and therefore we will use that for our granular simulation. \sidenote{You can find out more about it \href{http://www.cfdem.com/media/DEM/docu/pair_gran.html}{here}}
@@ -1047,9 +1060,11 @@ The \textit{pair style * *} commands refers that all atom type interaction inter
   pair_style gran model hertz tangential no_history cohesion sjkr 
 \end{minted}
 \sidenote{For more information on cohesion, you can find \href{http://www.cfdem.com/media/DEM/docu/Section_gran_models.html}{here}}
-
+\index{cohesion}
 \textbf{Timestep} It is generally advised to have a timestep about 20 \% of the Rayleigh timestep. You can check the hertz time being
 $$ Rayleigh Time Step =  \frac{R\times\pi\times\sqrt{\rho/G}}{(0.1631\times\nu + 0.8766)} $$
+\index{Rayleigh Time Step}
+\index{Timestep}
 \marginnote{Here, $\rho$ is density, G is Youngs Modulus, $\nu$ is poissons ratio and R is the radius}
 
 The first thing to determine the time step will be to calculate the Rayleigh timestep and take around 20\% of its value. Other wise, you could use an inbuilt function of \Li to use an inbuilt function to calculate the Rayleigh timestep and adust your timestep accordingly.
@@ -1165,7 +1180,7 @@ Running the code again results in
 \begin{minted}{bash}
   ERROR: Illegal thermo_modify command (../thermo.cpp:471)
 \end{minted}
-
+\index{Debugging}
 So, we are back to where we started. But the idea is that we know the error is amongst the two lines. And I can very well see that the keyword for \textbf{thermo\_modify} will \emph{no} instead of \textit{nope}. And that's how we catch an error.
 
 However, you could have easily inferred that there was something wrong with thermo command from the error itself. This would not be the case everytime. Hope you get the idea.
@@ -1174,7 +1189,7 @@ However, you could have easily inferred that there was something wrong with ther
 
 Okay, now we understand how to detect errors. The obvious next step would be debug and remove the error is to remove it. The way to do that is by refering more information on that particular command which is causing error in the \href{http://www.cfdem.com/media/DEM/docu/Section_commands.html#comm}{documentation of \Li.}
 And the second place where you could get help is the \href{http://www.cfdem.com/forum}{forum}. The thing to remember is before asking any questions, you should check out previous queries by searching. There is quite less activity however the community is friendly and someone always answers your question.
-
+\index{Getting help}
 \section{Summary}
 
 Hopefully this part will make you more confident in approaching towards making your own simulation.
@@ -1187,6 +1202,7 @@ Hopefully this part will make you more confident in approaching towards making y
 \end{fullwidth}
 
 \section{More functionality}
+\index{Danckwerts}
 \begin{enumerate}
 \item \textbf{ave/spatial:} Divides the region into bins and calculates the number of particles and their properties in each bin. Used for averaging. It can be used to calculate the \textit{Danckwert's Segregation Intensity}.
 \item \textbf{property/atom/tracer: } Particles are marked if they are inside a region specified by the region\_mark keyword. Can be combined with \textbf{compute nparticles/tracer/region} to calculate the \textbf{residence time distribution} in case of a hopper.
@@ -1221,16 +1237,20 @@ DEM is an extremely handy tool for gaining a good insight on the flow of powders
 \item Modelling flow of powders is quite difficult only through experimental calculations. Also the overhead cost and time, to model a new experimental data is quite large sometimes. 
 \end{itemize}
 
+\marginnote { This document is stored at \href{https://github.com/mendax-grip/PATPfizerDocumentation}{my Github Repo}}
+\index{Github}
+Learning \& working with\Li would be a continual process. This documentation could serve as a basis of recording progress in the continual improvement, where new methods and algorithm implementation in \Li could be kept and added for future reference. Therefore, this documentation is available at Github. You are welcome to file issues, fork the repo and pull requests, I would be happy to comply. 
 
-Learning \& working with\Li would be a continual process. This documentation could serve as a basis of recording progress in the continual improvement, where new methods and algorithm implementation in \Li could be kept and added for future reference. Therefore, this documentation is available at Github repo. You are welcome fork, push changes or file issues.
+\section{Ending note}
 
+Thanks for making it to the end. Hope it helped you a 
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 % -------------------------------------------------------------------
  ---------------------
 
-\bibliography{bibliography} % Use the bibliography.bib file for the bibliography
+\nobibliography{bibliography} % Use the bibliography.bib file for the bibliography
 \bibliographystyle{plainnat} % Use the plainnat style of referencing
 
 %----------------------------------------------------------------------------------------

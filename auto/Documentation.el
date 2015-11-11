@@ -45,8 +45,6 @@
     "tab:dimensions"
     "tab:template"
     "chap:4")
-   (LaTeX-add-bibliographies
-    "bibliography")
    (LaTeX-add-index-entries
     "acknowledgement"
     "Ubuntu"
@@ -56,7 +54,26 @@
     "Kernal"
     "Terminal"
     "opening terminal"
+    "Sudo Command"
     "Examples"
     "Input Script"
-    "Paraview")))
+    "Paraview"
+    "Initialisation"
+    "Properties"
+    "Detailed Settings"
+    "Execution"
+    "in.meshGran"
+    "Feedframe"
+    "Geometry"
+    "Gravity"
+    "Pair Style"
+    "Hertz"
+    "Hooke"
+    "cohesion"
+    "Rayleigh Time Step"
+    "Timestep"
+    "Debugging"
+    "Getting help"
+    "Danckwerts"
+    "Github")))
 
