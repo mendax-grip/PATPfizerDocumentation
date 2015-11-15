@@ -1,5 +1,5 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Tufte-Style Book (Minimal Template)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % LaTeX Template
 % Version 1.0 (5/1/13)
 %
@@ -68,8 +68,8 @@
 %	BOOK META-INFORMATION
 %----------------------------------------------------------------------------------------
 \title[Discrete Element Method using LIGGGHTS]{%
-  \setlength{\parindent}{6pt}%
-  Discrete Element \par Method \par using LIGGGHTS \par \vspace{1cm} }
+  \setlength{\parindent}{0pt}%
+  Discrete Element \par Method using \par  LIGGGHTS \par \vspace{1cm} }
  
 \author{Siddharth Kanungo}
 \date{November 2015}
@@ -92,11 +92,11 @@
 %----------------------------------------------------------------------------------------
 
 \thispagestyle{empty}
-\openepigraph{ }{Buddha, {\itshape Dhammapada}}
+\openepigraph{Every duty is holy and devotion to duty is the highest form of worship of God}{Swami Vivekananda}
 \vfill
-% \openepigraph{Quotation 2}{Author}
-% \vfill
-% \openepigraph{Quotation 3}{Author}
+\openepigraph{The greatest prayer is, patience}{Buddha}
+\vfill
+\openepigraph{I've noticed that even people who believe in fate look both ways before crossing the street.}{Stephen Hawking}
 
 %----------------------------------------------------------------------------------------
 
@@ -142,7 +142,7 @@
 \begin{doublespace}
 \noindent\fontsize{18}{22}\selectfont\itshape
 \nohyphenation
-To my rational brain, for always being there for me, despite all the shaky evidences pointing otherwise. 
+To my rational brain, for always being there for me (despite shaky evidences) .
 \end{doublespace}
 \vfill
 \vfill
@@ -156,23 +156,21 @@ To my rational brain, for always being there for me, despite all the shaky evide
 \label{ch:0}
  \index{acknowledgement}
 
-    \newthought{This Documentation} is a part of the project that I
-    worked on during the summer of 2015 at the PAT-Pfizer Chair in
-    Universit\'e  d\'e  Sherbrooke. This document wouldn't have been
-    possible without the guidance of Prof. Ryan Gosselin and
-    Prof. Nicolas Abatzoglou. 
+ \newthought{Firstly}, I would like to express my sincere gratitude to my supervisor Prof. Ryan Gosselin for the continuous support, for his patience, motivation, immense knowledge and his contagious energetic approach to problem solving.
 
-    \newthought{I would also} like to also like to thank all the Lab Members of the Research Group, who helped me generously during my internship and graciously welcomed me into their part of the life.
+ \newthought{My sincere thanks} also goes to Prof. Nicolas Abatzoglou, who provided an opportunity to join their team as an intern and shared valuable insights during my work involving LIGGGHTS. Throughout the internship, he lent tremendous support and encouragement for the work involving simulation and I am grateful for that.  
+ 
+ \newthought{I would also} like to also like to thank all the Lab Members of the Research Group, who helped me generously during my internship and graciously welcomed me into their part of the life.
 
-   \newthought{A special thanks} to Pedro Dura\'o, Philippe Kikongi, Himmat Dalvi, Francis Lavois, Ounaima  and Cl\'emence Fauteux-Lefebvre for  
+ \newthought{A special thanks} to Philippe Kikongi, Himmat Dalvi, Francis B. Lavoie, Oumaima Chaib  and Cl\'emence Fauteux-Lefebvre for stimulating discussions. And Pedro Dur\'ao, with whom I had the pleasure to spend a lot of time during the lab and who provided amazing working practical advices about the world like a zen monk from Portugal.  
 
-   \newthought{ I would also like} to thank all the people I met during the internship, who helped me settle in and feel welcome at the same time. At last I would like to thanks MITACS for funding this incredible journey.
-    
-    \newthought{This document was} submitted much late than it was supposed, even though it was almost completed very early. I would sincerely apologize for that. 
+ \newthought{ I would also like } to thank all the people I met during the internship, who helped me settle in and feel welcome. I would like to thanks MITACS for funding this research internship  and making all of this possible. 
 
-   
+ \newthought{ Lastly I want } to thanks my parents and two elder sisters, who supported and encouraged me with their best wishes.   
 
-   \newthought{ Siddharth Kanungo}
+ \newthought{ This document was } submitted much late than it was supposed, even though it was almost completed very early. I would sincerely apologize for that. 
+
+ \newthought{ Siddharth Kanungo}
     
     
  
@@ -1204,12 +1202,12 @@ Hopefully this part will make you more confident in approaching towards making y
 \section{More functionality}
 \index{Danckwerts}
 \begin{enumerate}
-\item \textbf{ave/spatial:} Divides the region into bins and calculates the number of particles and their properties in each bin. Used for averaging. It can be used to calculate the \textit{Danckwert's Segregation Intensity}.
-\item \textbf{property/atom/tracer: } Particles are marked if they are inside a region specified by the region\_mark keyword. Can be combined with \textbf{compute nparticles/tracer/region} to calculate the \textbf{residence time distribution} in case of a hopper.
-\item \textbf{multisphere: } Treat one or more sets of atoms as independent rigid bodies.
-\item \textbf{heat/gran/conduction :} Calculates the heat conduction between particles in contact.
-\item \textbf{humiidity model :} LIGGGHTS can be coupled with other systems to check the effect of Water(Humidity) on the system.
-\item \textbf{cohesion : } There are two models of cohesion that can be added to LIGGGHTS to simulate cohesive behaviour of substances
+\item \textbf{Ave/spatial:} Divides the region into bins and calculates the number of particles and their properties in each bin. Used for averaging. It can be used to calculate the \textit{Danckwert's Segregation Intensity}.
+\item \textbf{Property/atom/tracer: } Particles are marked if they are inside a region specified by the region\_mark keyword. Can be combined with \textbf{compute nparticles/tracer/region} to calculate the \textbf{residence time distribution} in case of a hopper.
+\item \textbf{Multisphere: } Treat one or more sets of atoms as independent rigid bodies.
+\item \textbf{Heat/gran/conduction :} Calculates the heat conduction between particles in contact.
+\item \textbf{Humidity model :} LIGGGHTS can be coupled with other systems to check the effect of Water(Humidity) on the system.
+\item \textbf{Cohesion : } There are two models of cohesion that can be added to LIGGGHTS to simulate cohesive behaviour of substances
 \end{enumerate}
 
 \section{Further Studying}
@@ -1243,7 +1241,9 @@ Learning \& working with\Li would be a continual process. This documentation cou
 
 \section{Ending note}
 
-Thanks for making it to the end. Hope it helped you a 
+Thanks for making it to the end. This was intended to be a Standard Operating Procedure-sque style of document, however, it is very difficult to imbibe all the aspects of SOP into a technical manual. If there were any issues or errors, or if something is not clearly explained or maybe you would like to have express opinions about this document, feel free to mail me at \textit{siddharth[dot]soka[at]gmail[dot]com}.
+
+
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY

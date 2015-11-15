@@ -46,5 +46,5 @@
 \contentsline {section}{Further Studying}{47}{section*.67}
 \contentsline {section}{Rationale behind working with \LaTeX }{48}{section*.68}
 \contentsline {section}{Ending note}{48}{section*.69}
-\contentsline {chapter}{Index}{49}{chapter*.70}
+\contentsline {chapter}{Index}{51}{chapter*.70}
 \contentsfinish 
